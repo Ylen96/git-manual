@@ -1,90 +1,96 @@
-<!DOCTYPE HTML>
-<head>
-    <title> Git Stash</title>
-    <meta charset="UTF-8">
-    <link href="../css/style.css" rel="stylesheet" type"text/css">
-	<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
-</head>
+<html>
+    <head>
+        <title>Git Diff</title>
+        <meta charset="UTF-8">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+    </head>
 
-<body>
-	<div id="titre"> 
-			<h1>Le fantastique guide de Git</h1>
-	</div>
-	<div id="nav">
-    <nav>
-        <ul> 
-		<li> <a href="../index.html">Menu </a> </li>
-		</ul>
-    </nav>
-	</div>
-	<div id="corps">
+    <body>
+        <div id="titre"> 
+            <h1> <a href="../index.html"> <img src="../images/logo.png" alt="logo" > </img> </a> <br>Le fantastique guide de Git</h1>
+        </div>
+        <div id="nav">
+                <nav>
+                    <ul>
+                        <li class="nolastmen"><a href="../index.html"> Menu </a></li>
+                    </ul>
+                </nav>
+        </div>
 		
-		<h3>la commande git diff</h3>
-    <section class="descriptif">
-        il s'agit de la commande qui 
-    </section>
+        <div id="corps">
+		
+        <section class="descriptif">
+            <p>Description</p>
+            <!--Description de la commande -->
+        </section>
 
-    <section class="affichage">
-        <h4>Syntaxe</h4>
-            <code>git diff</code>
-        <h4>Utlisation</h4>
-            <section>
-            il s'agit de la commande qui 
-            </section>
-    <section/>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git diff</code>
 
-    <section class="affichage">
-        
-			<code><h4> git diff</h4></code>
-            <section>
-            il s'agit de la commande qui montre les changements entre deux commits, entre un commit et la branche principale, etc.
-            </section>
-        <h4>Affichage</h4>
-             <div class="code">
-            <code>diff --git a/commandes.git-diff.html b/commandes/git-diff.html <br>
-			index 6af2c06..9e09c80 100644 <br>
-			--- a/commandes/git-diff.html <br>
-			+++ b/commandes/git-diff.html <br>
-			@@ -9,12 +9,12 @@
-			    montre les délétions exactes et en dessous les ajouts exacts
-			-	h1 id="titreCommande" git diff --cached 
-			+   h3 id="titreCommande" git diff --cached
-			</code>
-            </div>
-    <section/>
-   
-    <section class="affichage">
-            <code><h4> git diff --stat </h4></code>
-            
-             <section>
-                    il s'agit de la commande qui précisera les changements du dernier commit effectué, mais en beaucoup moins développé par rapport à git diff, ne donnant que le nombre d'insertions et de déletions.
-             </section>
-             
-        <h4>Affichage</h4>
-             <div class="code"><code>
-            commandes/git-diff.html | 8 +++++--- <br>
-			1 file changed, 5 insertions(+), 3 deletions(-)
-            </code>
-            </div>
-    </section>
+                <div class="code">
+                   <code>Exemple d'affichage dans le terminal</code>
+                </div>
+        </section>
 
-    <section class="affichage">
-            <code><h4> git diff --cached </h4></code>
-            
-             <section>
-                    il s'agit de la commande qui permettra de comparer deux commits entre eux. 
-             </section>
-             
-        <h4>Affichage</h4>
-             <div class="code"><code>
-            (je n'ai pas d'exemple)
-            </code>
-            </div>
-    </section>	
-	
-    <footer>        
-        <p>par SuzanneAir.</p>
+		
+		<h3 id="titreCommande"> git diff </h3>
+		
+		<section class="descriptif">
+            <p>Description</p>
+            <!--Description de la commande -->
+        </section>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>Syntaxe d'utilisation de la commande</code>
+
+                <div class="code">
+                   <code>diff --git a/commandes.git-diff.html b/commandes/git-diff.html <br>
+			             index 6af2c06..9e09c80 100644 <br>
+			             --- a/commandes/git-diff.html <br>
+			             +++ b/commandes/git-diff.html <br>
+			             @@ -9,12 +9,12 @@ <br>
+			             montre les délétions exactes et en dessous les ajouts exacts <br>
+			             -	h1 id="titreCommande" git diff --cached  <br>
+			             +   h3 id="titreCommande" git diff --cached <br></code>
+                </div>
+        </section>
+		
+		
+		<h3 id="titreCommande"> git blame --stat</h3>
+		<section class="descriptif">
+            <p> Il s'agit de la commande qui précisera les changements du dernier commit effectué,
+			mais en beaucoup moins développé par rapport à git diff, ne donnant que le nombre 
+			d'insertions et de déletions.</p>
+        </section>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git diff --stat</code>
+                <div class="code">
+                <code> commandes/git-diff.html | 8 +++++--- <br>
+			           1 file changed, 5 insertions(+), 3 deletions(-) <br></code>
+                </div>
+        </section>
+		
+		
+		<h3 id="titreCommande"> git diff --cached </h3>
+		<section class="descriptif">
+            <p>Il s'agit de la commande qui permettra de comparer deux commits entre eux. </p>
+        </section>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git diff --cached </code>
+                <div class="code">
+                <code> </code>
+                </div>
+        </section>
+		
+		
+         </div>
+    <footer>
+    <p> © Groupe d'IN202 2014-2015 UVSQ - Par ABOULFATH Ylène, CANAL Mélanie, SuzanneAir</p>
     </footer>
+    </body>
 
-</body>
- 
+</html>

@@ -1,74 +1,107 @@
-<head>
-	<title>git commit</title>
-	<meta charset="UTF-8">
-	<link href="../css/commandes.css" rel="stylesheet" type"text/css">
-</head>
+<html>
+    <head>
+        <title>Git Commit</title>
+        <meta charset="UTF-8">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+    </head>
 
-<body>
-	<nav>
-		<p href="./index.html">Menu</p>
-	</nav>
-	
-	<h1 id="titreCommande">git commit -m</h1>
-	<section class="descriptif">
-		<p>Cette commande va enregistrer les modifications préalablement faites avec
-		la commande git add directement dans l'historique et va permettre de leur 
-		associer un nom, ou message descriptif</p>
-		<h2> Affichage </h2>
-		<code> git commit -m "message descriptif"</code>
-	</section>
-	<section class="exemple"> 
-		<p>git commit -m "liens CSS"</p>
-		<h2>Affichage</h2>
-		<code>git add fichier1.html <br/>
-		      git add fichier2.html <br/>
-			  git commit -m "liens CSS" <br/>
-		   [gh-pages cbd590d] liens CSS <br/>
-		   2 files changed, 2 insertions (+), 2 deletions (-) <br/></code>
-	</section>
-	
-	<h1 id="titreCommande">git commit -a</h1>
-	<section class="descriptif">
-		<p>Cette commande permet de faire un commit non précédé de la commande git add,  
-		ainsi les fichiers modifiés entre deux commit peuvent directement être enregistré 
-        dans l'historique </p>
-		<h2>Affichage</h2>
-		<code>git commit -a</code>
-	</section>
-	<section class="exemple"> 
-		<p>git commit -a</p>
-		<h2>Affichage</h2>
-		<code> git status <br/>
-		       On branch gh-pages <br/>
-			   Your branch is up-to-date with 'origin/gh-pages'. <br/>
-			   <br/>
-			   modified : fichier1.html <br/>
-			   <br/>
-			   no changes added to commit (use "git add" ans/or "git commit -a") <br/>
-			   git commit -am "mise a jour fichier 1" <br></code>
-	</section>
-	
-	<h1 id="titreCommande">git commit --amend</h1>
-	<section class="descriptif">
-		<p>La commande git commit --amend permet de faire des modifications sur 
-		les métadonnées du dernier commit si vous avez fait des erreurs dans le 
-		commentaire ou si vous avez oublié de add un ficher. <br/>
-		ATENTION: Cela change l'histoire (et le SHA) donc n'utilisez pas cette 
-		dernière si vous avez déja publié vos commits!</p>
-		<h2>Affichage</h2>
-		<code>git commit --amend</code>
-	</section>
-	<section class="exemple"> 
-		<p>git commit --amend -m "modification de votre message de commit"</p>
-		<h2>Affichage</h2>
-		<code>git commit --amend -m "modification de votre message de commit"
-		[gh-pages 512fd5c] modification de votre message de commit <br/>
-		1 file changed, 1 insertion(+),1 deletion(-)<br/></code>
-	</section>
-	
-	<footer>		
-		<p>Git Manual - Par Ylène ABOULFATH, Charlotte Le Du et Kane Boubacar </p>
-	</footer>
-	 
-</body>
+    <body>
+        <div id="titre"> 
+            <h1> <a href="../index.html"> <img src="../images/logo.png" alt="logo" > </img> </a> <br>Le fantastique guide de Git</h1>
+        </div>
+        <div id="nav">
+                <nav>
+                    <ul>
+                        <li class="nolastmen"><a href="../index.html"> Menu</a></li>
+                    </ul>
+                </nav>
+        </div>
+		
+        <div id="corps">
+		
+        <section class="descriptif">
+            <p>Description</p>
+            <!--Description de la commande -->
+        </section>
 
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>Syntaxe d'utilisation de la commande</code>
+                <div class="code">
+                   <code>Exemple d'affichage dans le terminal</code>
+                </div>
+        </section>
+
+		
+		<h3 id="titreCommande"> git commit -m </h3>
+		<section class="descriptif">
+            <p> Cette commande va enregistrer les modifications préalablement faites avec
+		        la commande git add directement dans l'historique et va permettre de leur 
+		        associer un nom, ou message descriptif </p>
+        </section>
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git commit "message descriptif"</code>
+                <div class="code">
+                   <code>git add fichier1.html <br/>
+		                 git add fichier2.html <br/>
+			             git commit -m "liens CSS" <br/>
+		                 [gh-pages cbd590d] liens CSS <br/>
+		                 2 files changed, 2 insertions (+), 2 deletions (-) <br/></code>
+                </div>
+        </section>
+		
+		
+		<h3 id="titreCommande"> git commit -a </h3>
+		<section class="descriptif">
+            <p>Cette commande permet de faire un commit non précédé de la commande git add,  
+		       ainsi les fichiers modifiés entre deux commit peuvent directement être enregistré 
+               dans l'historique </p>
+        </section>
+
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git commit -am "message descriptif"</code>
+                <div class="code">
+                   <code>On branch gh-pages <br>
+			             Your branch is up-to-date with 'origin/gh-pages'. <br>
+			             <br>
+			             modified : fichier1.html <br>
+			             <br>
+			             no changes added to commit (use "git add" ans/or "git commit -a") <br>
+			             git commit -am "mise a jour fichier 1" </code>
+                </div>
+        </section>
+		
+		
+		<h3 id="titreCommande"> git commit --amend </h3>
+		
+		<section class="descriptif">
+            <p>La commande git commit --amend permet de faire des modifications sur 
+		       les métadonnées du dernier commit si vous avez fait des erreurs dans le 
+		       commentaire ou si vous avez oublié de add un ficher. <br>
+		       ATENTION: Cela change l'histoire (et le SHA) donc n'utilisez pas cette 
+		       dernière si vous avez déja publié vos commits!</p>
+        </section>
+
+        <section class="affichage">
+            <h4>Syntaxe :</h4>
+                <code>$git commit --amend -m "modification de votre message de commit"</code>
+                <div class="code">
+                   <code>git commit --amend -m "modification de votre message de commit" <br>
+		                 [gh-pages 512fd5c] modification de votre message de commit <br>
+		                 1 file changed, 1 insertion(+),1 deletion(-)<br></code>
+                </div>
+        </section>
+		
+		
+
+
+    </div>
+    <footer>
+    <p> © Groupe d'IN202 2014-2015 UVSQ - Par ABOULFATH Ylène, BOUBACAR Kane, LE DU Charlotte</p>
+    </footer>
+    </body>
+
+</html>
