@@ -8,7 +8,7 @@
 
     <body>
         <div id="titre"> 
-            <h1> <a href="../index.html"> <img src="../images/logo.png" alt="logo" > </img> </a> <br>Le fantastique guide de Git</h1>
+            <h1> <a href="../index.html"> <img src="../images/logo.png" alt="logo" > </img> </a> <br>Git Blame</h1>
         </div>
         <div id="nav">
                 <nav>
@@ -20,33 +20,32 @@
 		
         <div id="corps">
 		
-		<h3 id="titreCommande"> Git Blame </h3>
-        <section class="descriptif">
-            <p>Description</p>
-            <!--Description de la commande -->
+		<section class="descriptif">
+            <p> Cette commande va afficher les lignes d'un fichier et leur associer
+			    le dernier commit qui les concernes, afin de pouvoir comparer chaque
+				ligne, et trouver d'eventuels problèmes.</p>
         </section>
-
         <section class="affichage">
             <h4>Syntaxe :</h4>
-                <code>Syntaxe d'utilisation de la commande</code>
-
+                <code>$git blame nom_du_fichier </code>
                 <div class="code">
-                   <code>Exemple d'affichage dans le terminal</code>
+                   <code>$ git blame exemple.html <br>
+				         a153f89d (Ylen96 2015-03-12 15:07:46 +0100 1) dossier X, Y et Z <br>
+						 1501d1d9 (Ylen96 2015-03-12 15:12:23 +0100 2) fichier exemple   <br>
+						 a153f89d (Ylen96 2015-03-12 15:07:46 +0100 3)                   <br>
+						 1501d1d9 (Ylen96 2015-03-12 15:12:23 +0100 4) 0782592389        <br></code>
                 </div>
         </section>
 
 		
 		<h3 id="titreCommande"> git blame -L </h3>
-		
 		<section class="descriptif">
             <p>Description</p>
             <!--Description de la commande -->
         </section>
-
         <section class="affichage">
             <h4>Syntaxe :</h4>
-                <code>Syntaxe d'utilisation de la commande</code>
-
+                <code>$git blame-L l.début,l.fin  nom_du_fichier</code>
                 <div class="code">
                    <code>Exemple d'affichage dans le terminal</code>
                 </div>
@@ -54,22 +53,22 @@
 		
 		
 		<h3 id="titreCommande"> git blame --reverse</h3>
-		
 		<section class="descriptif">
-            <p>Description</p>
-            <!--Description de la commande -->
+            <p>Au lieu de montrer la révision dans laquelle une ligne est 
+			   apparu, la commande affiche la dernière version dans laquelle
+			   une ligne a existé. Ceci exige une gamme de révision comme le 
+			   DÉBUT.. LA FIN où le chemin pour blame existe dans le DÉBUT.</p>
         </section>
-
         <section class="affichage">
             <h4>Syntaxe :</h4>
-                <code>syntaxe commande</code>
+                <code>git blame --reverse nom_du_fichier</code>
                 <div class="code">
                    <code> dans le terminal</code>
                 </div>
         </section>
 		
 		
-         </div>
+    </div>
     <footer>
     <p> © Groupe d'IN202 2014-2015 UVSQ - Par ABOULFATH Ylène, CANAL Mélanie, SuzanneAir</p>
     </footer>
