@@ -33,37 +33,46 @@
 				         a153f89d (Ylen96 2015-03-12 15:07:46 +0100 1) dossier X, Y et Z <br>
 						 1501d1d9 (Ylen96 2015-03-12 15:12:23 +0100 2) fichier exemple   <br>
 						 a153f89d (Ylen96 2015-03-12 15:07:46 +0100 3)                   <br>
-						 1501d1d9 (Ylen96 2015-03-12 15:12:23 +0100 4) 0782592389        <br></code>
+						 1501d1d9 (Ylen96 2015-03-12 15:12:23 +0100 4) 0782592389        <br>
+					</code>
                 </div>
         </section>
 
 		
 		<h3 id="titreCommande"> git blame -L </h3>
 		<section class="descriptif">
-            <p>Description</p>
-            <!--Description de la commande -->
+		    <p> Cette commande va permettre de restreindre les lignes affichées par le ""blame"" et donc de 
+			    diminuer le nombre de ligne visibles, et à comparer. <br>
+				Pour annoter les lignes que l'on souhaite observer on va utiliser, "-L <start>" pour le début, 
+				ainsi on peut observer les lignes depuis le début choisi jusqu'à la fin du fichier <br></p>
         </section>
         <section class="affichage">
             <h4>Syntaxe :</h4>
-                <code>$git blame-L l.début,l.fin  nom_du_fichier</code>
+                <code>$git blame -L <start> nom_du_fichier</code>
                 <div class="code">
-                   <code>Exemple d'affichage dans le terminal</code>
+                   <code>$ git blame -L 45 branch.html
+				         57221160 (Melanie13340 2015-03-08 17:35:30 +0100 45) <"/footer">   <br>
+				         57221160 (Melanie13340 2015-03-08 17:35:30 +0100 46)               <br>
+				         57221160 (Melanie13340 2015-03-08 17:35:30 +0100 47) <"/body">     <br>
+				  </code>
+					</code>
                 </div>
         </section>
 		
 		
 		<h3 id="titreCommande"> git blame --reverse</h3>
 		<section class="descriptif">
-            <p>Au lieu de montrer la révision dans laquelle une ligne est 
-			   apparu, la commande affiche la dernière version dans laquelle
-			   une ligne a existé. Ceci exige une gamme de révision comme le 
-			   DÉBUT.. LA FIN où le chemin pour blame existe dans le DÉBUT.</p>
+            <p> Au lieu d'afficher les lignes et de leur associer le dernier commit qui les à modifiées,
+			    cette commande va nous permettre d'observer les lignes modifier à partir d'un SHA (commit).
+			    Ceci exige une gamme de révision le  DÉBUT .. LA FIN où le chemin pour blame existe dans le DÉBUT.</p>
         </section>
         <section class="affichage">
             <h4>Syntaxe :</h4>
-                <code>git blame --reverse nom_du_fichier</code>
+                <code>git blame --reverse <rev> nom_du_fichier</code>
                 <div class="code">
-                   <code> dans le terminal</code>
+                   <code> Exemple d'un affichage dans le terminal <br>
+				          (que nous n'avons pas reussi à obtenir) <br>
+				    </code>
                 </div>
         </section>
 		
